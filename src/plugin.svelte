@@ -11,25 +11,28 @@
     Put your plugin code here
 </section>
 <script lang="ts">
-    import bcast from "@windy/broadcast";
-    import { onDestroy, onMount } from 'svelte';
+    import { pmsr } from "./pmsr.geojson.json";
+    import { map } from '@windy/map'
+    import { onDestroy } from 'svelte';
 
-    import config from './pluginConfig';
+    const geoJsonData = pmsr;
 
-    const { title } = config;
-
-
-    export const onopen = (_params: unknown) => {
-        // Your plugin was opened with parameters parsed from URL
-        // or with LatLon object if opened from contextmenu
-    };
-
-    onMount(() => {
-        // Your plugin was mounted
+    layer = new L.GeoJSON(geoJsonData, {
+        style: {
+            color: '#76f5f7',
+            weight: 1,
+            opacity: 0.7,
+            fillOpacity: 0.2,
+            fillColor: 'transparent',
+         },
     });
 
+    map.addLayer(layer)
+
     onDestroy(() => {
-        // Your plugin was destroyed
+        if(layer) {
+            layer.remove();
+        }
     });
 </script>
 
