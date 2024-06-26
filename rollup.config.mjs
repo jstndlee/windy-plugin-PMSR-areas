@@ -13,6 +13,8 @@ import sveltePreprocess from 'svelte-preprocess';
 
 import { transformCodeToESMPlugin, keyPEM, certificatePEM } from '@windycom/plugin-devtools';
 
+import geojson from 'rollup-plugin-geojson';
+
 const useSourceMaps = true;
 
 const buildConfigurations = {
@@ -53,7 +55,8 @@ const buildConfigurations = {
 const requiredConfig = process.env.CONFIG || 'src';
 const { input, out } = buildConfigurations[requiredConfig];
 
-export default {
+export default [
+{
     input,
     output: [
         {
@@ -122,4 +125,13 @@ export default {
                 },
             }),
     ],
-};
+},
+{
+input: 'src/plugin.svelte',
+    output: {
+        dir: 'output',
+        format: 'cjs'
+    },
+    plugins: [geojson()]
+}
+];
