@@ -1,6 +1,6 @@
 <div class="size-s mb-5">{ title }</div>
 <script lang="ts">
-    import { pmsr } from "./pmsr.geojson.json";
+    import { pmsr } from "./pmsr.geojson";
     import { map } from '@windy/map'
     import { onDestroy } from 'svelte';
 
