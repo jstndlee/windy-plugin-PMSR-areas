@@ -34,5 +34,8 @@
     "homepage": "https://docs.windy-plugins.com/",
     "dependencies": {
         "@windycom/plugin-devtools": "^2.0.0"
+    },
+    "devDependencies": {
+        "rollup-plugin-geojson": "^0.1.0"
     }
 }

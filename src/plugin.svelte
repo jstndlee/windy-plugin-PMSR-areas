@@ -1,15 +1,4 @@
-<div class="plugin__mobile-header">
-    { title }
-</div>
-<section class="plugin__content">
-    <div
-        class="plugin__title plugin__title--chevron-back"
-        on:click={ () => bcast.emit('rqstOpen', 'menu') }
-    >
-    { title }
-    </div>
-    Put your plugin code here
-</section>
+<div class="size-s mb-5">{ title }</div>
 <script lang="ts">
     import { pmsr } from "./pmsr.geojson.json";
     import { map } from '@windy/map'
@@ -22,7 +11,7 @@
             color: '#76f5f7',
             weight: 1,
             opacity: 0.7,
-            fillOpacity: 0.2,
+            fillOpacity:  0,
             fillColor: 'transparent',
          },
     });
