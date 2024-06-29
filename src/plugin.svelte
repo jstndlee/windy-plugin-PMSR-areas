@@ -6,7 +6,7 @@
 
     const geoJsonData = "./pmsr.geojson";
 
-    layer = new L.GeoJSON(geoJsonData, {
+    layer = new L.geojson(geoJsonData, {
         style: {
             color: '#76f5f7',
             weight: 1,
