@@ -2,7 +2,7 @@ import type { ExternalPluginConfig } from '@windy/interfaces';
 
 const config: ExternalPluginConfig = {
     name: 'windy-plugin-pmsr-areas',
-    version: '0.1.0',
+    version: '0.1.1',
     icon: '⚓️',
     title: 'PMSR areas',
     description: 'This plugin adds an overlay of the PMSR areas.',
