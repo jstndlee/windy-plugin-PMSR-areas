@@ -1,7 +1,6 @@
 <div class="size-s mb-5">PMSR areas</div>
 
 <script lang="ts">
-//    import { pmsr } from "./pmsr.geojson";
     import { map } from '@windy/map'
     import { onDestroy } from 'svelte';
 
