@@ -6,8 +6,8 @@
     import { onDestroy } from 'svelte';
 
     let layer: L.GeoJSON | null = null;
-    const geoJsonData = ./pmsr.geojson;
-    const geoJsonData - await geoJson.json();
+    const geoJson = fetch('pmsr.geojson');
+    const geoJsonData = geoJson.json();
 
     layer = new L.GeoJSON(geoJsonData, {
         style: {
