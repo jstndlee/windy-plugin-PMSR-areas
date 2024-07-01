@@ -1,12 +1,15 @@
-<div> "PMSR areas" </div>
+<div class="size-s mb-5">PMSR areas</div>
+
 <script lang="ts">
 //    import { pmsr } from "./pmsr.geojson";
     import { map } from '@windy/map'
     import { onDestroy } from 'svelte';
 
-    const geoJsonData = "./pmsr.geojson";
+    let layer: L.GeoJSON | null = null;
+    const geoJsonData = ./pmsr.geojson;
+    const geoJsonData - await geoJson.json();
 
-    layer = new L.geojson(geoJsonData, {
+    layer = new L.GeoJSON(geoJsonData, {
         style: {
             color: '#76f5f7',
             weight: 1,
